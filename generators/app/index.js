@@ -28,22 +28,22 @@ const transformName = {
 	fileName: {
 		search: '%FILE_NAME%',
 		replace: (name) => name.charAt(0).toUpperCase() + name.toLowerCase().slice(1),
-		key: 'module'
+		key: 'model'
 	},
 	kamelName: {
 		search: '%KAMEL_NAME%',
 		replace: (name) => name.charAt(0).toUpperCase() + name.toLowerCase().slice(1),
-		key: 'module'
+		key: 'model'
 	},
 	lowerName: {
 		search: '%LOWER_NAME%',
 		replace: (name) => name.toLowerCase(),
-		key: 'module'
+		key: 'model'
 	},
 	upperName: {
 		search: '%UPPER_NAME%',
 		replace: (name) => name.toUpperCase(),
-		key: 'module'
+		key: 'model'
 	}
 };
 
@@ -51,7 +51,8 @@ class Tictales extends Generator {
 	prompting() {
 		const prompts = [
 			{ type: 'input', name: 'module', message: 'Le nom du module :', default: 'nouveauModule' },
-			{ type: 'input', name: 'url', message: "La racine de l'url :", default: 'modulePath' }
+			{ type: 'input', name: 'model', message: 'La nom du model :', default: 'modelName' },
+			{ type: 'input', name: 'url', message: "La racine de l'url API:", default: 'modulePath' }
 		];
 
 		return this.prompt(prompts).then((props) => {
@@ -63,7 +64,7 @@ class Tictales extends Generator {
 		for (let path of tplPath) {
 			let newPath = path.src
 				.replace('%NAME_MODULE%', this.props.module)
-				.replace('%FILE_NAME%', transformName.fileName.replace(this.props.module));
+				.replace('%FILE_NAME%', transformName.fileName.replace(this.props[transformName.fileName.key]));
 			if (path.type === 'folder') {
 				mkdirp(newPath);
 			} else {
