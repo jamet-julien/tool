@@ -33,7 +33,7 @@ class RootContainer extends React.Component {
 					<Row>
 						<Col xs={12}>
 							<PageHeader>
-								<span style={{ display: 'inline-block', marginRight: '10px' }}>Games</span>
+								<span style={{ display: 'inline-block', marginRight: '10px' }}>%KAMEL_NAME%</span>
 							</PageHeader>
 						</Col>
 					</Row>
@@ -41,7 +41,7 @@ class RootContainer extends React.Component {
 					<Row>
 						<Col xs={12}>
 							<ListGroup>
-								{games.map((item, index) => (
+								{%LOWER_NAME%.map((item, index) => (
 									<Link
 										className="list-group-item"
 										to={`${location.pathname}/${item.id}`}
