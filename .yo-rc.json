@@ -1,0 +1,9 @@
+{
+  "generator-node": {
+    "promptValues": {
+      "authorName": "julien jamet",
+      "authorEmail": "jamet.julien@gmail.com",
+      "authorUrl": ""
+    }
+  }
+}

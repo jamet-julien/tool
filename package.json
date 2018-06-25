@@ -1,0 +1,69 @@
+{
+	"name": "generator-tictales",
+	"version": "0.0.0",
+	"description": "tool to use for tictales",
+	"homepage": "",
+	"author": {
+		"name": "julien jamet",
+		"email": "jamet.julien@gmail.com",
+		"url": ""
+	},
+	"files": [
+		"generators"
+	],
+	"main": "generators/index.js",
+	"keywords": [
+		"",
+		"yeoman-generator"
+	],
+	"devDependencies": {
+		"coveralls": "^3.0.0",
+		"husky": "^0.14.3",
+		"jest": "^22.0.6",
+		"lint-staged": "^6.1.1",
+		"mkdirp": "^0.5.1",
+		"prettier": "^1.11.1",
+		"replace": "^1.0.0",
+		"webpack": "^4.12.1",
+		"yeoman-assert": "^3.1.0",
+		"yeoman-test": "^1.7.0"
+	},
+	"engines": {
+		"npm": ">= 4.0.0"
+	},
+	"dependencies": {
+		"chalk": "^2.1.0",
+		"nsp": "^3.2.1",
+		"yeoman-generator": "^2.0.1",
+		"yosay": "^2.0.1"
+	},
+	"jest": {
+		"testEnvironment": "node"
+	},
+	"scripts": {
+		"prepublishOnly": "nsp check",
+		"pretest": "eslint .",
+		"precommit": "lint-staged",
+		"test": "jest"
+	},
+	"lint-staged": {
+		"*.js": [
+			"eslint --fix",
+			"git add"
+		],
+		"*.json": [
+			"prettier --write",
+			"git add"
+		]
+	},
+	"eslintConfig": {
+		"extends": "react-app"
+	},
+	"babel": {
+		"presets": [
+			"react-app"
+		]
+	},
+	"repository": "jamet-julien/generator-tictales",
+	"private": true
+}
