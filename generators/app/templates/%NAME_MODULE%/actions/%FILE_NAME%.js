@@ -51,7 +51,7 @@ export const get%KAMEL_NAME% = (paramsUrl) => (dispatch, getState, Api) => {
 
 export const add%KAMEL_NAME% = (paramsUrl, data) => (dispatch, getState, Api) => {
 	dispatch(actions.add.start());
-	Api.sendRequest(API_ADD, paramsUrl, data).then(({ status, payload }) => {
+	return Api.sendRequest(API_ADD, paramsUrl, data).then(({ status, payload }) => {
 		if (status === 'SUCCESS') {
 			dispatch(actions.add.success(payload, paramsUrl, data));
 		} else {
@@ -62,7 +62,7 @@ export const add%KAMEL_NAME% = (paramsUrl, data) => (dispatch, getState, Api) =>
 
 export const update%KAMEL_NAME% = (paramsUrl, data) => (dispatch, getState, Api) => {
 	dispatch(actions.update.start());
-	Api.sendRequest(API_UPDATE, paramsUrl, data).then(({ status, payload }) => {
+	return Api.sendRequest(API_UPDATE, paramsUrl, data).then(({ status, payload }) => {
 		if (status === 'SUCCESS') {
 			dispatch(actions.update.success(payload, paramsUrl, data));
 		} else {
@@ -73,7 +73,7 @@ export const update%KAMEL_NAME% = (paramsUrl, data) => (dispatch, getState, Api)
 
 export const delete%KAMEL_NAME% = (paramsUrl, data) => (dispatch, getState, Api) => {
 	dispatch(actions.delete.start());
-	Api.sendRequest(API_DELETE, paramsUrl, data).then(({ status, payload }) => {
+	return Api.sendRequest(API_DELETE, paramsUrl, data).then(({ status, payload }) => {
 		if (status === 'SUCCESS') {
 			dispatch(actions.delete.success(payload, paramsUrl, data));
 		} else {
