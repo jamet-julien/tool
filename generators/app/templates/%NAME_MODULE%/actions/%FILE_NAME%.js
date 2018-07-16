@@ -1,4 +1,3 @@
-import { factoryPayload } from 'helpers/factoryAction';
 import {
 	LOADING,
 	LOADED,
@@ -18,24 +17,24 @@ import { API_GET, API_ADD, API_UPDATE, API_DELETE } from '../requests/%FILE_NAME
 
 const actions = {
 	load: {
-		start: () => factoryPayload(LOADING),
-		success: (payload, paramsUrl, data) => factoryPayload(LOADED, {items : payload.items}),
-		error: (payload) => factoryPayload(LOADED_FAILURE)
+		start: () => ({type:LOADING}),
+		success: (payload, paramsUrl, data) => ({type:LOADED, payload:{items : payload.items}}),
+		error: (payload) => ({type:LOADED_FAILURE})
 	},
 	add: {
-		start: () => factoryPayload(ADDING),
-		success: (payload, paramsUrl, data) => factoryPayload(ADDED, { items: payload.items }),
-		error: (payload) => factoryPayload(ADDED_FAILURE)
+		start: () => ({type:ADDING}),
+		success: (payload, paramsUrl, data) => ({type:ADDED, payload:{ items: payload.items }}),
+		error: (payload) => ({type:ADDED_FAILURE})
 	},
 	update:{
-		start: () => factoryPayload(UPDATING),
-		success: (payload, paramsUrl, data) => factoryPayload(UPDATED, { items: payload.items }),
-		error: (payload) => factoryPayload(UPDATED_FAILURE)
+		start: () => ({type:UPDATING}),
+		success: (payload, paramsUrl, data) => ({type:UPDATED, payload:{ items: payload.items }}),
+		error: (payload) => ({type:UPDATED_FAILURE})
 	},
 	delete: {
-		start: () => factoryPayload(DELETING),
-		success: (payload, paramsUrl, data) => factoryPayload(DELETED, { items: payload.items }),
-		error: (payload) => factoryPayload(DELETED_FAILURE)
+		start: () => ({type:DELETING}),
+		success: (payload, paramsUrl, data) => ({type:DELETED, payload:{ items: payload.items }}),
+		error: (payload) => ({type:DELETED_FAILURE})
 	}
 };
 

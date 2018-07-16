@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { get%KAMEL_NAME%, add%KAMEL_NAME%, update%KAMEL_NAME%, delete%KAMEL_NAME%} from 'modules/%MODULE_NAME%';
+import { get%KAMEL_NAME% , add%KAMEL_NAME%, update%KAMEL_NAME%, delete%KAMEL_NAME%} from 'modules/%NAME_MODULE%/actions';
 
 import { reloadedPromise } from 'helpers/factoryAction';
 
@@ -26,7 +26,7 @@ class RootContainer extends React.Component {
 	}
 
 	render() {
-		const { %LOWER_NAME% } = this.props;
+		const { %LOWER_NAME%, location } = this.props;
 	if( %LOWER_NAME%.length) {
 			return (
 				<Grid fluid>
@@ -62,7 +62,8 @@ class RootContainer extends React.Component {
 }
 
 const mapStateToProps = (state) => {
-	return { %LOWER_NAME%: state.%LOWER_NAME%.items };
+	return { %LOWER_NAME%: state.%LOWER_NAME%.items,
+		location : state.router.location };
 };
 
 const mapDispatchToProps = {

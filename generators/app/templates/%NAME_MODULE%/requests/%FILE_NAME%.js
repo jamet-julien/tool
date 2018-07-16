@@ -11,8 +11,8 @@ export const API_UPDATE = `${scope}_UPDATE`;
 export const API_DELETE = `${scope}_DELETE`;
 
 export default {
-	[`${API_GET}`]: api.get({}),
-	[`${API_ADD}`]: api.post({}),
-	[`${API_UPDATE}`]: api.put({}),
-	[`${API_DELETE}`]: api.del({})
+  [`${API_GET}`]: api.get({}),
+  [`${API_ADD}`]: api.post({}),
+  [`${API_UPDATE}`]: api.put({}),
+  [`${API_DELETE}`]: api.delete({}),
 };

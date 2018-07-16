@@ -6,14 +6,20 @@ const mkdirp = require('mkdirp');
 const tplPath = [
   { src: '%NAME_MODULE%', type: 'folder' },
   { src: '%NAME_MODULE%/actions', type: 'folder' },
+  { src: '%NAME_MODULE%/actions/index.js', type: 'file' },
   { src: '%NAME_MODULE%/actions/%FILE_NAME%.js', type: 'file' },
+
   { src: '%NAME_MODULE%/containers', type: 'folder' },
   { src: '%NAME_MODULE%/containers/%FILE_NAME%.jsx', type: 'file' },
+
   { src: '%NAME_MODULE%/reducers', type: 'folder' },
   { src: '%NAME_MODULE%/reducers/%FILE_NAME%.js', type: 'file' },
   { src: '%NAME_MODULE%/reducers/index.js', type: 'file' },
+
   { src: '%NAME_MODULE%/requests', type: 'folder' },
+  { src: '%NAME_MODULE%/requests/index.js', type: 'file' },
   { src: '%NAME_MODULE%/requests/%FILE_NAME%.js', type: 'file' },
+
   { src: '%NAME_MODULE%/constants.js', type: 'file' },
   { src: '%NAME_MODULE%/index.js', type: 'file' },
   { src: '%NAME_MODULE%/routes.js', type: 'file' },
@@ -44,6 +50,11 @@ const transformName = {
     search: '%UPPER_NAME%',
     replace: name => name.toUpperCase(),
     key: 'model',
+  },
+  moduleName: {
+    search: '%NAME_MODULE%',
+    replace: name => name.toLowerCase(),
+    key: 'module',
   },
 };
 
