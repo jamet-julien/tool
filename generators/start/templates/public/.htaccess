@@ -1,0 +1,11 @@
+<IfModule mod_rewrite.c>
+
+  RewriteEngine On
+  RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -f [OR]
+  RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -d
+  RewriteRule ^ - [L]
+
+  # Fallback all other routes to index.html
+  RewriteRule ^ /translator/index.html [L]
+
+</IfModule>

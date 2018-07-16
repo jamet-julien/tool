@@ -1,0 +1,24 @@
+.btn-success {
+  position: relative;
+  outline: none;
+  border: none;
+}
+
+.btn-success::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.5);
+  display: block;
+  transition: width 30ms ease-out;
+  outline: 1px solid rgba(255, 255, 255, 0.5);
+  box-sizing: border-box;
+}
+
+.btn-success:hover.hold::before {
+  width: 0%;
+  transition: width 3s ease-out;
+}

@@ -1,0 +1,87 @@
+.toogleLabel {
+  width: 40px;
+  height: 21px;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  margin-left: 19px;
+}
+.toogleInput {
+  display: none;
+}
+.toogleSpan {
+  background: #ccc;
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  transition: all 30ms;
+}
+
+.toogleSpan::before {
+  display: inline-block;
+  content: '';
+  position: absolute;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 20px;
+  border: 2px solid #ccc;
+  top: 0;
+  left: 0;
+  width: 50%;
+  transform: translate(100%, 0);
+  color: #333;
+  text-align: center;
+  font-size: 13px;
+}
+
+input.wait + .toogleSpan::before {
+  width: 100%;
+  transform: translate(0, 0);
+  content: '...';
+  animation: slideIn 50ms;
+  border-color: #ccc;
+}
+
+input.toogleInput:checked + .toogleSpan {
+  background: #8bc34a;
+}
+
+input.toogleInput:checked + .toogleSpan::before {
+  content: '';
+  width: 50%;
+  border: 2px solid #8bc34a;
+  transform: translate(0, 0);
+}
+
+input:checked.wait + .toogleSpan::before {
+  width: 100%;
+  transform: translate(0, 0);
+  content: '...';
+  animation: slideOut 50ms;
+  border-color: #8bc34a;
+}
+
+@keyframes slideIn {
+  from {
+    width: 100%;
+    transform: translate(0%, 0);
+  }
+
+  to {
+    width: 50%;
+    transform: translate(100%, 0);
+  }
+}
+
+@keyframes slideOut {
+  from {
+    width: 50%;
+    transform: translate(100%, 0);
+  }
+
+  to {
+    width: 100%;
+    transform: translate(0%, 0);
+  }
+}
