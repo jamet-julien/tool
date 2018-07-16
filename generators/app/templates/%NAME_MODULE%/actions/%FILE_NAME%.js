@@ -8,8 +8,11 @@ import {
 	ADDED_FAILURE,
 	UPDATING,
 	UPDATED,
-	UPDATED_FAILURE
-} from '../constants';
+	UPDATED_FAILURE,
+	DELETING,
+	DELETED,
+	DELETED_FAILURE
+} from "../constants";
 import { API_GET, API_ADD, API_UPDATE, API_DELETE } from '../requests/%FILE_NAME%';
 
 

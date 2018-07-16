@@ -23,6 +23,7 @@
 		"lint-staged": "^6.1.1",
 		"mkdirp": "^0.5.1",
 		"prettier": "^1.11.1",
+		"rename": "^1.0.4",
 		"replace": "^1.0.0",
 		"webpack": "^4.12.1",
 		"yeoman-assert": "^3.1.0",

@@ -1,12 +1,22 @@
 'use strict';
 const chalk = require('chalk');
+const Stream = require('stream');
 const Generator = require('yeoman-generator');
+
+const stream = new Stream.Transform({ objectMode: true });
+
+stream._transform = function(data, unused, callback) {
+  data.path = data.path.replace(/\/?_/g, '/.');
+  callback(null, data);
+};
 
 class Tictales extends Generator {
   writing() {
     console.log('Start ...');
+    this.registerTransformStream(stream);
     this.fs.copyTpl(this.templatePath(), this.destinationPath(), {});
   }
+
   install() {
     this.installDependencies({
       bower: false,
