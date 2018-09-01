@@ -58,7 +58,7 @@ const transformName = {
   },
 };
 
-class Tictales extends Generator {
+class Project extends Generator {
   prompting() {
     const prompts = [
       { type: 'input', name: 'module', message: 'Le nom du module :', default: 'user' },
@@ -104,4 +104,4 @@ class Tictales extends Generator {
   }
 }
 
-module.exports = Tictales;
+module.exports = Project;

@@ -10,7 +10,7 @@ stream._transform = function(data, unused, callback) {
   callback(null, data);
 };
 
-class Tictales extends Generator {
+class Project extends Generator {
   writing() {
     console.log('Start ...');
     this.registerTransformStream(stream);
@@ -31,4 +31,4 @@ class Tictales extends Generator {
   }
 }
 
-module.exports = Tictales;
+module.exports = Project;

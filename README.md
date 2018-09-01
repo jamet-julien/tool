@@ -1,19 +1,19 @@
-# generator-tictales [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
-> tool to use for tictales
+# generator-poject [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
+> tool to use for project
 
 ## Installation
 
-First, install [Yeoman](http://yeoman.io) and generator-tictales using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)).
+First, install [Yeoman](http://yeoman.io) and generator-project using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)).
 
 ```bash
 npm install -g yo
-npm install -g generator-tictales
+npm install -g generator-project
 ```
 
 Then generate your new project:
 
 ```bash
-yo tictales
+yo project
 ```
 
 ## Getting To Know Yeoman
@@ -28,11 +28,11 @@ yo tictales
  © [julien jamet]()
 
 
-[npm-image]: https://badge.fury.io/js/generator-tictales.svg
-[npm-url]: https://npmjs.org/package/generator-tictales
-[travis-image]: https://travis-ci.org/jamet-julien/generator-tictales.svg?branch=master
-[travis-url]: https://travis-ci.org/jamet-julien/generator-tictales
-[daviddm-image]: https://david-dm.org/jamet-julien/generator-tictales.svg?theme=shields.io
-[daviddm-url]: https://david-dm.org/jamet-julien/generator-tictales
-[coveralls-image]: https://coveralls.io/repos/jamet-julien/generator-tictales/badge.svg
-[coveralls-url]: https://coveralls.io/r/jamet-julien/generator-tictales
+[npm-image]: https://badge.fury.io/js/generator-project.svg
+[npm-url]: https://npmjs.org/package/generator-project
+[travis-image]: https://travis-ci.org/jamet-julien/generator-project.svg?branch=master
+[travis-url]: https://travis-ci.org/jamet-julien/generator-project
+[daviddm-image]: https://david-dm.org/jamet-julien/generator-project.svg?theme=shields.io
+[daviddm-url]: https://david-dm.org/jamet-julien/generator-project
+[coveralls-image]: https://coveralls.io/repos/jamet-julien/generator-project/badge.svg
+[coveralls-url]: https://coveralls.io/r/jamet-julien/generator-project
